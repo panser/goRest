@@ -1,0 +1,21 @@
+spring:
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/ivdevranking
+
+
+goRest:
+    parse:
+        userAgent: 'Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6'
+        planB:
+            url: 'http://planb.ua/'
+            selector:
+                listSelector: '#views_fluidgrid_frontpage_page .views-fluidgrid-item'
+                urlForEntitySelector: '.views-fluidgrid-item-inner .node .field-type-text-with-summary .read-more a'
+                entitySelector: '.view-mode-full'
+                entityTitleSelector: '.node-title'
+                entityDate:
+                    selector: 'header .submitted'
+                    format: 'dd/MM/yyyy'
+                    index: 1
+                entityImageUrlSelector: '.nodetext .field-name-field-image .field-item a'

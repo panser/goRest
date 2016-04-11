@@ -41,6 +41,8 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-validation')
     compile('org.springframework.boot:spring-boot-starter-web')
 //	compile('org.springframework.data:spring-data-rest-hal-browser:2.4.4.RELEASE')
+    compile('org.jsoup:jsoup:1.8.3')
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
