@@ -8,14 +8,111 @@ goRest:
     parse:
         userAgent: 'Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6'
         planB:
-            url: 'http://planb.ua/'
+            url: 'http://planb.ua'
+            startPath: ''
             selector:
-                listSelector: '#views_fluidgrid_frontpage_page .views-fluidgrid-item'
-                urlForEntitySelector: '.views-fluidgrid-item-inner .node .field-type-text-with-summary .read-more a'
-                entitySelector: '.view-mode-full'
-                entityTitleSelector: '.node-title'
-                entityDate:
+                list:
+                    info: 'find list of links to pages with description each trip'
+                    selector: '#views_fluidgrid_frontpage_page .views-fluidgrid-item'
+                urlForEntity:
+                    info: 'find href to page which describe trip'
+                    selector: '.views-fluidgrid-item-inner .node .field-type-text-with-summary .read-more a'
+                entity:
+                    info: 'find div that contain information about trip'
+                    selector: '.view-mode-full'
+
+                entityTitle:
+                    info: 'find Trip.title'
+                    selector: '.node-title'
+                entityLogoUrl:
+                    info: 'find Trip.logoUrl'
+                    selector: '.route-image'
+                entityLocation:
+                    info: 'find Trip.location'
+                    selector: ''
+                entityDateStart:
+                    info: 'find Trip.dateStart'
                     selector: 'header .submitted'
                     format: 'dd/MM/yyyy'
                     index: 1
-                entityImageUrlSelector: '.nodetext .field-name-field-image .field-item a'
+                entityDateFinish:
+                    info: 'find Trip.dateFinish'
+                    selector: ''
+                    format: 'dd/MM/yyyy'
+                    index: 1
+                entityKm:
+                    info: 'find Trip.km'
+                    selector: ''
+                entityLevel:
+                    info: 'find Trip.level'
+                    selector: ''
+                entityCost:
+                    info: 'find Trip.cost'
+                    selector: ''
+                entityType:
+                    info: 'find Trip.type'
+                    selector: ''
+                entityDescription:
+                    info: 'find Trip.description'
+                    selector: ''
+                entityCompanyName:
+                    info: 'find Trip.companyName'
+                    selector: ''
+                entityUrl:
+                    info: 'find Trip.url'
+                    selector: ''
+
+        kuluarpohod:
+            url: 'http://kuluarpohod.com'
+            startPath: '/routes'
+            selector:
+                list:
+                    info: 'find list of links to pages with description each trip'
+                    selector: '.list-routes-entry .hike-list-bl'
+                urlForEntity:
+                    info: 'find href to page which describe trip'
+                    selector: '.hike-title-link'
+                entity:
+                    info: 'find div that contain information about trip'
+                    selector: 'div[itemtype="http://schema.org/Offer"]'
+
+                entityTitle:
+                    info: 'find Trip.title'
+                    selector: 'h1[itemprop="name"]'
+                entityLogoUrl:
+                    info: 'find Trip.logoUrl'
+                    selector: '.route-image'
+                entityLocation:
+                    info: 'find Trip.location'
+                    selector: 'meta[itemprop="name"]'
+                entityDateStart:
+                    info: 'find Trip.dateStart'
+                    selector: ''
+                    format: 'dd/MM/yyyy'
+                    index: 1
+                entityDateFinish:
+                    info: 'find Trip.dateFinish'
+                    selector: ''
+                    format: 'dd/MM/yyyy'
+                    index: 1
+                entityKm:
+                    info: 'find Trip.km'
+                    selector: '.desk-param:nth-child(3) .param-value__text'
+                entityLevel:
+                    info: 'find Trip.level'
+                    selector: ''
+                entityCost:
+                    info: 'find Trip.cost'
+                    selector: ''
+                entityType:
+                    info: 'find Trip.type'
+                    selector: ''
+                entityDescription:
+                    info: 'find Trip.description'
+                    selector: ''
+                entityCompanyName:
+                    info: 'find Trip.companyName'
+                    selector: ''
+                entityUrl:
+                    info: 'find Trip.url'
+                    selector: ''

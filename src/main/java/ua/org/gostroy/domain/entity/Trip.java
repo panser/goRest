@@ -11,8 +11,8 @@ public class Trip {
 
     private Long id;
     private String title;
-    private String imageUrl;
-    private byte[] picture;
+    private String logoUrl;
+    private byte[] logo;
     private String location;
     private Date dateStart;
     private Date dateFinish;
@@ -42,12 +42,12 @@ public class Trip {
         this.title = title;
     }
 
-    public byte[] getPicture() {
-        return picture;
+    public byte[] getLogo() {
+        return logo;
     }
 
-    public void setPicture(byte[] picture) {
-        this.picture = picture;
+    public void setLogo(byte[] logo) {
+        this.logo = logo;
     }
 
     public String getLocation() {
@@ -130,11 +130,11 @@ public class Trip {
         this.url = url;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getLogoUrl() {
+        return logoUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setLogoUrl(String logoUrl) {
+        this.logoUrl = logoUrl;
     }
 }
