@@ -1,0 +1,106 @@
+{
+  "name": "http://planb.ua",
+  "startPath": "",
+  "selector": [
+    {
+      "name": "list",
+      "type": "string",
+      "index": "0",
+      "info": "find list of links to pages with description each trip",
+      "selector": "#views_fluidgrid_frontpage_page .views-fluidgrid-item"
+    },
+    {
+      "name": "urlForEntity",
+      "type": "string",
+      "index": "0",
+      "info": "find href to page which describe trip",
+      "selector": ".views-fluidgrid-item-inner .node .field-type-text-with-summary .read-more a"
+    },
+    {
+      "name": "entity",
+      "type": "string",
+      "index": "0",
+      "info": "find div that contain information about trip",
+      "selector": ".view-mode-full"
+    },
+    {
+      "name": "entityTitle",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.title",
+      "selector": ".node-title"
+    },
+    {
+      "name": "entityLogoUrl",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.logoUrl",
+      "selector": ".route-image"
+    },
+    {
+      "name": "entityLocation",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.location",
+      "selector": ""
+    },
+    {
+      "name": "entityDateStart",
+      "type": "date",
+      "index": "1",
+      "format": "dd/MM/yyyy",
+      "info": "find Trip.dateStart",
+      "selector": "header .submitted"
+    },
+    {
+      "name": "entityDateFinish",
+      "type": "date",
+      "index": "1",
+      "format": "dd/MM/yyyy",
+      "info": "find Trip.dateFinish",
+      "selector": ""
+    },
+    {
+      "name": "entityLevel",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.level",
+      "selector": ""
+    },
+    {
+      "name": "entityCost",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.cost",
+      "selector": ""
+    },
+    {
+      "name": "entityType",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.type",
+      "selector": ""
+    },
+    {
+      "name": "entityDescription",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.description",
+      "selector": ""
+    },
+    {
+      "name": "entityCompanyName",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.companyName",
+      "selector": ""
+    },
+    {
+      "name": "entityUrl",
+      "type": "string",
+      "index": "0",
+      "info": "find Trip.url",
+      "selector": ""
+    }
+  ]
+}

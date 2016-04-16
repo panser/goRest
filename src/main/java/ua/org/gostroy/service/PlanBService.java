@@ -7,7 +7,6 @@ import org.jsoup.select.Elements;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 import ua.org.gostroy.domain.entity.Trip;
 import ua.org.gostroy.util.JsoupUtils;
 
@@ -20,7 +19,7 @@ import java.util.List;
 /**
  * Created by Sergey on 4/11/2016.
  */
-@Service
+//@Service
 public class PlanBService extends TripService {
 
     private final Logger log = LoggerFactory.getLogger(getClass());
